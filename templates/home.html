@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Cover Template · Bootstrap</title>,
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/cover/cover.css" rel="stylesheet">
+</head>
+<body class="text-center" style="background-color:#cccccc;">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center">
+               <a class="nav-link active" href="{{ url_for('home') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">home</a>
+                <a class="nav-link" href="{{ url_for('search') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">search</a>
+                <a class="nav-link" href="{{ url_for('insert') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">upload</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <img src="{{url_for('static', filename='logo.png')}}" width="400" height="380" style="margin-bottom: 1.5em">
+        <!-- <h1 class="cover-heading">Cover your page.</h1> -->
+        <p class="lead" style="font-family:Impact;font-size:160%;color:black;">A way to bind and retrieve links in one
+            place.</p>
+        <p class="lead">
+        </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

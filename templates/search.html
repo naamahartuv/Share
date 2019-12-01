@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type = text/javascript src="{{url_for('static', filename ='jquery-3.4.1.min.js')}}"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+
+
+
+
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/cover/cover.css" rel="stylesheet">
+    <script>
+    var main = function(data) {
+                console.log('hello from post'); // not running????
+
+                console.log(data);
+               buildTable();
+            };
+    function f(){
+    console.log('hello from f');
+    $.post('{{url_for('textsearch')}}', $("form").serialize(), main , 'json' );};
+       function buildTable() {
+       // add here remove table
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+}
+
+
+
+
+    </script>
+</head>
+<body style="background-color:#cccccc;" class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="{{ url_for('home') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">home</a>
+                <a class="nav-link" href="{{ url_for('search') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">search</a>
+                <a class="nav-link" href="{{ url_for('insert') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">upload</a>
+            </nav>
+        </div>
+    </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+                body {
+                  font-family: Arial;
+                }
+
+                * {
+                  box-sizing: border-box;
+                }
+
+                form.example input[type=text] {
+                  padding: 10px;
+                  font-size: 17px;
+                  border: 1px solid grey;
+                  float: left;
+                  width: 80%;
+                  background: #f1f1f1;
+                }
+
+                form.example button {
+                  float: left;
+                  width: 20%;
+                  padding: 10px;
+                  background: #2196F3;
+                  color: white;
+                  font-size: 17px;
+                  border: 1px solid grey;
+                  border-left: none;
+                  cursor: pointer;
+                }
+
+                form.example button:hover {
+                  background: #D27DEC;
+                }
+
+                form.example::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+
+
+
+
+
+
+
+    </style>
+    <p style=font-family:Impact;font-size:130%;color:black;>Please enter your key word:</p>
+
+    <!--
+    Name: <input type="text" id="myText" value="type to search">
+
+    <button onclick="myFunction()">Try it</button> -->
+
+    <table id="myTable">
+        <tr>
+            <!-- <td>Link</td> -->
+        </tr>
+    </table>
+</div>
+<form class="example" action="/textsearch" method="post" style="margin:auto;max-width:300px">
+    Subject:<br>
+    <input type="text" name="subject" value="">
+    <br><br>
+<!--    <input type="submit" value="Submit" onclick="f()">-->
+<input type="submit" value="Submit">
+</form>
+<form>
+
+
+</form>
+</body>
+</html>

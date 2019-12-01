@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    <script src="MyDB.js"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/cover/cover.css" rel="stylesheet">
+</head>
+<body style="background-color:#cccccc;" class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="{{ url_for('home') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">home</a>
+                <a class="nav-link" href="{{ url_for('search') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">search</a>
+                <a class="nav-link" href="{{ url_for('insert') }}"
+                   style=" font-family:Impact;font-size:150%;color:black;">upload</a>
+            </nav>
+        </div>
+    </header>
+
+    <style>
+        body {
+          font-family: Arial;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid grey;
+          float: left;
+          width: 80%;
+          background: #f1f1f1;
+        }
+
+        form.example button {
+          float: right;
+          width: 30%;
+          padding: 20;
+          background: #2196F3;
+          color: white;
+          font-size: 21px;
+          border: 1px solid grey;
+          border-left: none;
+          cursor: pointer;
+        }
+
+        form.example button:hover {
+          background: #D27DEC;
+        }
+
+        form.example::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+
+
+
+
+
+    </style>
+</div>
+<center>
+<form class="example" action="/addurl" method="post" style="margin:auto;max-width:500px">
+    Link:<br>
+    <input type="text" name="URL" value=""
+           style="width:500px;border-color: black;margin-bottom: 1.5em">
+    <br>
+    Subject:<br>
+    <input type="text" name="subject" value=""
+           style="width:500px;border-color: black;margin-bottom: 1.5em">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+</center>
+
+</body>
+</html>
