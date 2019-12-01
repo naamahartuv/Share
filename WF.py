@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from WF import Flask, render_template, request
 from db import add, retrive
 
 app = Flask(__name__)
