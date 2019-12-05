@@ -9,7 +9,7 @@ def add(URL, subject):
                 'subject': subject
             }
 
-    result = fb.post('/share-2fffe/Link', data)
+    fb.post('/share-2fffe/Link', data)
 
 
 def retrive(subject):
